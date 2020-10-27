@@ -103,7 +103,7 @@
                             <div>
 <!--                                <button class="send" type="submit"  id="send" onclick="return validation()"> Отправить </button>-->
 <!--                                <button class="reset" type="reset" > Сбросить </button>-->
-                                <h:commandLink value="Отправить" action="#{requestBean.isHit()}"/>
+                                <h:commandLink value="Отправить" action="#{entryBean.addToResultList(requestBean)}"/>
                             </div>
                         </h:form>
                     </div>

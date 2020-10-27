@@ -64,23 +64,25 @@
                             <!--X Coordinate-->
                             <div class="item_x">
                                 <label> Координата X
+                                    <h:inputText name="X" value="#{requestBean.x}"/>
                                     <br/>
-                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="-2"/>-2</label>
-                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="-1.5"/>-1.5</label>
-                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="-1"/>-1</label>
-                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="-0.5"/>-0.5</label>
-                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="0"/>0</label>
-                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="0.5"/>0.5</label>
-                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="1.0"/>1.0</label>
-                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="1.5"/>1.5</label>
-                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="2"/>2</label>
+<!--                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="-2"/>-2</label>-->
+<!--                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="-1.5"/>-1.5</label>-->
+<!--                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="-1"/>-1</label>-->
+<!--                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="-0.5"/>-0.5</label>-->
+<!--                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="0"/>0</label>-->
+<!--                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="0.5"/>0.5</label>-->
+<!--                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="1.0"/>1.0</label>-->
+<!--                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="1.5"/>1.5</label>-->
+<!--                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="2"/>2</label>-->
                                 </label>
                             </div>
 
                             <!--Y Coordinate-->
                             <div class="item_y">
                                 <label > Координата Y -
-                                    <input class="y" size="12px" id="y_value" name="y_value" type="text" maxlength="8"/>
+                                    <h:inputText name="Y" value="#{requestBean.y}"/>
+<!--                                    <input class="y" size="12px" id="y_value" name="y_value" type="text" maxlength="8"/>-->
                                 </label>
                             </div>
 
@@ -88,18 +90,20 @@
                             <div class="item_radius">
                                 <label id="r_value"> Радиус R
                                     <br/>
-                                    <label class="checkbox-label"><input type="checkbox" name="r_value" value="1" />1</label>
-                                    <label class="checkbox-label"><input type="checkbox" name="r_value" value="2" />2</label>
-                                    <label class="checkbox-label"><input type="checkbox" name="r_value" value="3" />3</label>
-                                    <label class="checkbox-label"><input type="checkbox" name="r_value" value="4" />4</label>
-                                    <label class="checkbox-label"><input type="checkbox" name="r_value" value="5" />5</label>
+                                    <h:inputText name="R" value="#{requestBean.r}"/>
+<!--                                    <label class="checkbox-label"><input type="checkbox" name="r_value" value="1" />1</label>-->
+<!--                                    <label class="checkbox-label"><input type="checkbox" name="r_value" value="2" />2</label>-->
+<!--                                    <label class="checkbox-label"><input type="checkbox" name="r_value" value="3" />3</label>-->
+<!--                                    <label class="checkbox-label"><input type="checkbox" name="r_value" value="4" />4</label>-->
+<!--                                    <label class="checkbox-label"><input type="checkbox" name="r_value" value="5" />5</label>-->
                                 </label>
                             </div>
 
                             <!--Buttons-->
                             <div>
-                                <button class="send" type="submit"  id="send" onclick="return validation()"> Отправить </button>
-                                <button class="reset" type="reset" > Сбросить </button>
+<!--                                <button class="send" type="submit"  id="send" onclick="return validation()"> Отправить </button>-->
+<!--                                <button class="reset" type="reset" > Сбросить </button>-->
+                                <h:commandLink value="Отправить" action="#{entryBean.addToResultList(requestBean)}"/>
                             </div>
                         </h:form>
                     </div>
@@ -115,6 +119,21 @@
                                     <th>Время</th>
                                     <th>Время выполнения</th>
                                 </tr>
+                                <tr>
+                                    <td>
+                                        #{entryBean.dataList.size()}
+                                        #{requestBean.x}
+                                    </td>
+                                    <td>
+                                        #{requestBean.y}
+                                    </td>
+                                    <td>
+                                        #{requestBean.r}
+                                    </td>
+                                    <td>
+                                        #{requestBean.hit}
+                                    </td>
+                                </tr>
                                 </thead>
                             </table>
                         </div>
@@ -127,39 +146,5 @@
         </div>
     </div>
 
-
-
-
-
-
-
-
-
-
-<!--    <div class="container_1">-->
-<!--        <div class="container_2">-->
-<!--            <h:form>-->
-<!--                Координата X: <h:inputText name="X" value="#{requestBean.x}"/> <br/>-->
-<!--                Координата Y: <h:inputText name="Y" value="#{requestBean.y}"/> <br/>-->
-<!--                Значение Радиуса : <h:inputText name="R" value="#{requestBean.r}"/> <br/>-->
-<!--                <h:commandLink value="Отправить" action="#{requestBean.isHit()}"/>-->
-<!--            </h:form>-->
-<!--            <table>-->
-<!--                <caption>Таблица результатов</caption>-->
-<!--                <tr>-->
-<!--                    <th>X</th>-->
-<!--                    <th>Y</th>-->
-<!--                    <th>R</th>-->
-<!--                    <th>Попал?</th>-->
-<!--                </tr>-->
-<!--                <tr>-->
-<!--                    <td>#{requestBean.x}</td>-->
-<!--                    <td>#{requestBean.y}</td>-->
-<!--                    <td>#{requestBean.r}</td>-->
-<!--                    <td>#{requestBean.hit}</td>-->
-<!--                </tr>-->
-<!--            </table>-->
-<!--        </div>-->
-<!--    </div>-->
 </h:body>
 </html>
