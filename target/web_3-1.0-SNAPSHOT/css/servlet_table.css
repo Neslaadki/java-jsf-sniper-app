@@ -1,0 +1,85 @@
+table.res_table {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 14px;
+    border-radius: 10px;
+    border-spacing: 0;
+    text-align: center;
+}
+table.res_table th {
+    background: #BCEBDD;
+    color: white;
+    text-shadow: 0 1px 1px #2D2020;
+    padding: 10px 20px;
+}
+table.res_table th, td {
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: white;
+}
+table.res_table th:first-child, td:first-child {
+    text-align: left;
+}
+table.res_table th:first-child {
+    border-top-left-radius: 10px;
+}
+table.res_table th:last-child {
+    border-top-right-radius: 10px;
+    border-right: none;
+}
+table.res_table td {
+    padding: 10px 20px;
+    background: #F8E391;
+}
+table.res_table tr:last-child td:first-child {
+    border-radius: 0 0 0 10px;
+}
+table.res_table tr:last-child td:last-child {
+    border-radius: 0 0 10px 0;
+}
+table.res_table tr td:last-child {
+    border-right: none;
+}
+
+div.block_{
+    position:absolute;
+    height:100%;
+    width:100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+div.block__1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+     padding:16px 2px;
+     border:solid 6px #ffffff;
+     -webkit-border-radius:44px;
+     -moz-border-radius:44px;
+     border-radius: 44px;
+     font:12px Arial, Helvetica, sans-serif;
+     font-weight:bold;
+     color:#ffffff;
+     background-color:#3d3d3d;
+     background-image: -moz-linear-gradient(top, #3d3d3d 0%, #00ccff 100%);
+     background-image: -webkit-linear-gradient(top, #3d3d3d 0%, #00ccff 100%);
+     background-image: -o-linear-gradient(top, #3d3d3d 0%, #00ccff 100%);
+     background-image: -ms-linear-gradient(top, #3d3d3d 0% ,#00ccff 100%);
+     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ccff', endColorstr='#00ccff',GradientType=0 );
+     background-image: linear-gradient(top, #3d3d3d 0% ,#00ccff 100%);
+     -webkit-box-shadow:0px 0px 10px #bababa, inset 0px 0px 1px #ffffff;
+     -moz-box-shadow: 0px 0px 10px #bababa,  inset 0px 0px 1px #ffffff;
+     box-shadow:0px 0px 10px #bababa, inset 0px 0px 1px #ffffff;
+
+ }
+
+button:hover{
+    border:solid 3px wheat;
+}

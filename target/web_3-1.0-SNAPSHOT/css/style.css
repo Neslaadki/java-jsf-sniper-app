@@ -1,0 +1,93 @@
+body {
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-color: rgb(74, 116, 91);
+}
+
+header {
+    margin: 10px 0px 0px 0px;
+    background-color: dimgray;
+    opacity: 70%;
+    text-align: center;
+}
+
+header h1,
+p,
+a {
+    color: ghostwhite;
+    opacity: 100%;
+}
+
+header p,
+a {
+    font-size: 20px;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header a:hover {
+    color: pink;
+    font-size: 25px;
+}
+
+.block {
+    /* text-align: center; */
+    margin: 120px 0 10px 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.block__item {
+    border: 20px solid rgb(0, 0, 0);
+    width: 500px;
+    height: 450px;
+    text-align: center;
+    background-color: rgba(192, 181, 84, 0.6);
+    font-size: 30px;
+    color: seashell;
+    font-weight: 500;
+    opacity: 80%;
+    backdrop-filter: blur(6px);
+    border-radius: 25px;
+}
+#itemBlockWithSVG{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block__svg{
+    width: 300px;
+    height: 300px;
+}
+
+.style_block {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* img .coordinate */
+
+label {
+    font-size: 20px;
+    font-weight: bold;
+}
+label.checkbox-label{
+    font-size: 14px;
+}
+
+.block span{
+    color: white;
+    font-weight: bold;
+}
+
+text {
+    font-size: 16px;
+    font-weight: bold;
+}

@@ -1,15 +1,17 @@
 package webapp;
 
 import javax.faces.bean.ManagedBean;
-import javax.inject.Named;
+import javax.faces.bean.SessionScoped;
+import java.io.Serializable;
 
 
-@ManagedBean(name = "resultBean")
-public class ResultManagedBean {
+@ManagedBean(name = "requestBean")
+@SessionScoped
+public class RequestBean implements Serializable {
 
-    private double x = 23;
+    private double x;
     private double y;
-    private double z;
+    private double r;
     private boolean hit;
 
     public double getX() {
@@ -28,19 +30,20 @@ public class ResultManagedBean {
         this.y = y;
     }
 
-    public double getZ() {
-        return z;
+    public double getR() {
+        return r;
     }
 
-    public void setZ(double z) {
-        this.z = z;
+    public void setR(double r) {
+        this.r = r;
     }
 
     public boolean isHit() {
-        return hit;
+        return x > 10 && y > 10 && r > 10;
     }
 
     public void setHit(boolean hit) {
         this.hit = hit;
     }
+
 }

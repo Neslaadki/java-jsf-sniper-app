@@ -1,0 +1,17 @@
+button {
+    background-color: yellow; /* Green */
+    border: none;
+    color: black;
+    padding: 5px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+}
+button:hover{
+    cursor: pointer;
+}
+
+#clean_button {
+    width: 100%;
+}
