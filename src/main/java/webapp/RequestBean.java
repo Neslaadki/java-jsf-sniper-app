@@ -38,11 +38,11 @@ public class RequestBean implements Serializable {
         this.r = r;
     }
 
-    public boolean isHit() {
+    public boolean getHit() {
         return x > 10 && y > 10 && r > 10;
     }
 
-    public void setHit(boolean hit) {
+    public void isHit(boolean hit) {
         this.hit = hit;
     }
 

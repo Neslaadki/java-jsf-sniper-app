@@ -2,9 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
 <h:head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Работа №3</title>
@@ -109,33 +109,23 @@
                     </div>
                     <div>
                         <div class="mobile-table">
-                            <table class="iksweb" id="resultTable">
-                                <thead>
-                                <tr>
-                                    <th>X</th>
-                                    <th>Y</th>
-                                    <th>R</th>
-                                    <th>Попал?</th>
-                                    <th>Время</th>
-                                    <th>Время выполнения</th>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        #{entryBean.dataList.size()}
-                                        #{requestBean.x}
-                                    </td>
-                                    <td>
-                                        #{requestBean.y}
-                                    </td>
-                                    <td>
-                                        #{requestBean.r}
-                                    </td>
-                                    <td>
-                                        #{requestBean.hit}
-                                    </td>
-                                </tr>
-                                </thead>
-                            </table>
+                            <h:dataTable value="#{entryBean.dataList}" var="entry"
+                                         style="width: auto; border-width:2px;">
+                                <h:column>
+                                    <f:facet name="header">X</f:facet>
+                                    <h:outputText value="#{entry.x}"/>
+                                </h:column>
+
+                                <h:column>
+                                    <f:facet name="header">Y</f:facet>
+                                    <h:outputText value="#{entry.y}"/>
+                                </h:column>
+
+                                <h:column>
+                                    <f:facet name="header">R</f:facet>
+                                    <h:outputText value="#{entry.r}"/>
+                                </h:column>
+                            </h:dataTable>
                         </div>
                         <form action="Cleaner">
                             <button class="resetTable" type="submit" id="clean_button"> Очистить таблицу </button>

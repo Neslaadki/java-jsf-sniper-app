@@ -19,7 +19,7 @@ public class EntryBean {
     public RequestBean bean;
 
     public void addToResultList(RequestBean bean){
-        this.dataList.add(0, bean);
+        this.dataList.add(dataList.size(), bean);
     }
 
     public RequestBean selectFromResultBean(){
