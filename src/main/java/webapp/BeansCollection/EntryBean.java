@@ -5,10 +5,9 @@ import webapp.RequestBean;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.inject.Inject;
-import javax.inject.Named;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Stack;
+
 
 @SessionScoped
 @ManagedBean(name = "entryBean")
@@ -29,4 +28,9 @@ public class EntryBean {
     public List<RequestBean> getDataList() {
         return dataList;
     }
+
+    public int getListSize(){
+        return dataList.size();
+    }
+
 }

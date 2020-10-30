@@ -4,7 +4,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://java.sun.com/jsf/facelets"
+      xsi:schemaLocation="http://primefaces.org/ui/extensions">
 <h:head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Работа №3</title>
@@ -48,9 +49,12 @@
                             <text x="157" y="275" class="axis-text" id="radius-text-bottom">-R</text>
 
                             <!-- draw figures - -->
-                            <polygon points="90,150 150,30 150,150" fill="#00f" stroke="#003" fill-opacity="0.5"></polygon>
-                            <rect height="120" width="60" x="150" y="150" fill-opacity="0.5" fill="#a0f" stroke="#003"></rect>
-                            <path stroke="#003" d="M 270,150 L 150,150 L 150,90 A 60,60 0 0 1 210,150" fill-opacity="0.5"></path>
+                            <polygon points="90,150 150,30 150,150" fill="#00f" stroke="#003"
+                                     fill-opacity="0.5"></polygon>
+                            <rect height="120" width="60" x="150" y="150" fill-opacity="0.5" fill="#a0f"
+                                  stroke="#003"></rect>
+                            <path stroke="#003" d="M 270,150 L 150,150 L 150,90 A 60,60 0 0 1 210,150"
+                                  fill-opacity="0.5"></path>
 
                         </svg>
                     </div>
@@ -66,23 +70,23 @@
                                 <label> Координата X
                                     <h:inputText name="X" value="#{requestBean.x}"/>
                                     <br/>
-<!--                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="-2"/>-2</label>-->
-<!--                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="-1.5"/>-1.5</label>-->
-<!--                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="-1"/>-1</label>-->
-<!--                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="-0.5"/>-0.5</label>-->
-<!--                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="0"/>0</label>-->
-<!--                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="0.5"/>0.5</label>-->
-<!--                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="1.0"/>1.0</label>-->
-<!--                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="1.5"/>1.5</label>-->
-<!--                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="2"/>2</label>-->
+                                    <!--                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="-2"/>-2</label>-->
+                                    <!--                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="-1.5"/>-1.5</label>-->
+                                    <!--                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="-1"/>-1</label>-->
+                                    <!--                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="-0.5"/>-0.5</label>-->
+                                    <!--                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="0"/>0</label>-->
+                                    <!--                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="0.5"/>0.5</label>-->
+                                    <!--                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="1.0"/>1.0</label>-->
+                                    <!--                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="1.5"/>1.5</label>-->
+                                    <!--                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="2"/>2</label>-->
                                 </label>
                             </div>
 
                             <!--Y Coordinate-->
                             <div class="item_y">
-                                <label > Координата Y -
+                                <label> Координата Y -
                                     <h:inputText name="Y" value="#{requestBean.y}"/>
-<!--                                    <input class="y" size="12px" id="y_value" name="y_value" type="text" maxlength="8"/>-->
+                                    <!--                                    <input class="y" size="12px" id="y_value" name="y_value" type="text" maxlength="8"/>-->
                                 </label>
                             </div>
 
@@ -91,18 +95,18 @@
                                 <label id="r_value"> Радиус R
                                     <br/>
                                     <h:inputText name="R" value="#{requestBean.r}"/>
-<!--                                    <label class="checkbox-label"><input type="checkbox" name="r_value" value="1" />1</label>-->
-<!--                                    <label class="checkbox-label"><input type="checkbox" name="r_value" value="2" />2</label>-->
-<!--                                    <label class="checkbox-label"><input type="checkbox" name="r_value" value="3" />3</label>-->
-<!--                                    <label class="checkbox-label"><input type="checkbox" name="r_value" value="4" />4</label>-->
-<!--                                    <label class="checkbox-label"><input type="checkbox" name="r_value" value="5" />5</label>-->
+                                    <!--                                    <label class="checkbox-label"><input type="checkbox" name="r_value" value="1" />1</label>-->
+                                    <!--                                    <label class="checkbox-label"><input type="checkbox" name="r_value" value="2" />2</label>-->
+                                    <!--                                    <label class="checkbox-label"><input type="checkbox" name="r_value" value="3" />3</label>-->
+                                    <!--                                    <label class="checkbox-label"><input type="checkbox" name="r_value" value="4" />4</label>-->
+                                    <!--                                    <label class="checkbox-label"><input type="checkbox" name="r_value" value="5" />5</label>-->
                                 </label>
                             </div>
 
                             <!--Buttons-->
                             <div>
-<!--                                <button class="send" type="submit"  id="send" onclick="return validation()"> Отправить </button>-->
-<!--                                <button class="reset" type="reset" > Сбросить </button>-->
+                                <!--                                <button class="send" type="submit"  id="send" onclick="return validation()"> Отправить </button>-->
+                                <!--                                <button class="reset" type="reset" > Сбросить </button>-->
                                 <h:commandLink value="Отправить" action="#{entryBean.addToResultList(requestBean)}"/>
                             </div>
                         </h:form>
@@ -125,10 +129,15 @@
                                     <f:facet name="header">R</f:facet>
                                     <h:outputText value="#{entry.r}"/>
                                 </h:column>
+
+                                <h:column>
+                                    <f:facet name="header">Попал?</f:facet>
+                                    <h:outputText value="#{entry.hit}"/>
+                                </h:column>
                             </h:dataTable>
                         </div>
                         <form action="Cleaner">
-                            <button class="resetTable" type="submit" id="clean_button"> Очистить таблицу </button>
+                            <button class="resetTable" type="submit" id="clean_button"> Очистить таблицу</button>
                         </form>
                     </div>
                 </div>

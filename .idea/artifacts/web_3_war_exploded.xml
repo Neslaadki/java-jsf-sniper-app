@@ -16,6 +16,7 @@
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: javax.faces:jsf-api:2.1" />
           <element id="library" level="project" name="Maven: org.primefaces:primefaces:7.0" />
+          <element id="library" level="project" name="Maven: org.primefaces:primefaces:8.0" />
         </element>
       </element>
       <element id="directory" name="META-INF">
