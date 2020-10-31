@@ -1,0 +1,40 @@
+<component name="libraryTable">
+  <library name="JBoss Weld-2.0.3" type="CDI">
+    <properties version="2.0.3" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/weld-api.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/cdi-api.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/weld-core-impl.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/weld-core.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/weld-core-jsf.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/weld-se-core.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/weld-se.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/weld-servlet.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/weld-servlet-core.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/weld-spi.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/cdi-api-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/weld-api-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/weld-core-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/weld-core-impl-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/weld-core-jsf-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/weld-se-core-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/weld-servlet-core-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/weld-servlet-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/weld-spi-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/cdi-api-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/weld-api-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/weld-core-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/weld-core-impl-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/weld-core-jsf-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/weld-se-core-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/weld-se-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/weld-servlet-core-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/weld-servlet-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/javax/inject/javax.inject/1/weld-spi-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

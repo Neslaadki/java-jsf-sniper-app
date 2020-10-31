@@ -1,4 +1,4 @@
-package webapp;
+package webapp.BeansCollection;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 @ManagedBean(name = "requestBean")
 @SessionScoped
-public class RequestBean implements Serializable {
+public class EntityBean implements Serializable {
 
     private double x;
     private double y;

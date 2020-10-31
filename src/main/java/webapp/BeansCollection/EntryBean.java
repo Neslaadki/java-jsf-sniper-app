@@ -1,6 +1,6 @@
 package webapp.BeansCollection;
 
-import webapp.RequestBean;
+
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
@@ -12,20 +12,20 @@ import java.util.List;
 @SessionScoped
 @ManagedBean(name = "entryBean")
 public class EntryBean {
-    private final List<RequestBean> dataList = new ArrayList<>();
+    private final List<EntityBean> dataList = new ArrayList<>();
 
     @Inject
-    public RequestBean bean;
+    public EntityBean bean;
 
-    public void addToResultList(RequestBean bean){
+    public void addToResultList(EntityBean bean){
         this.dataList.add(dataList.size(), bean);
     }
 
-    public RequestBean selectFromResultBean(){
+    public EntityBean selectFromResultBean(){
         return dataList.get(0);
     }
 
-    public List<RequestBean> getDataList() {
+    public List<EntityBean> getDataList() {
         return dataList;
     }
 
