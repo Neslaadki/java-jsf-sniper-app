@@ -1,2 +1,3 @@
-webapp/RequestBean.class
+webapp/BeansCollection/EntityBean.class
 webapp/BeansCollection/EntryBean.class
+webapp/BeansCollection/ExamplePoint.class
