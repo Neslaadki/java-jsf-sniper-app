@@ -1,0 +1,43 @@
+package webapp.db;
+
+import java.util.HashSet;
+
+public class IdGenerator {
+
+    private static HashSet<Integer> idSet = new HashSet<>();
+    private static Integer count = 1;
+
+    public static int generate() {
+        try {
+            while (idSet.contains(count)){
+                if (count == Integer.MAX_VALUE){
+                    throw new StackOverflowError();
+                }else{
+                    count++;
+            }
+        }
+
+        put(count);
+        return count;
+
+        }catch (StackOverflowError e){
+            return -1;
+        }
+    }
+
+    public static void put(Integer id) {
+        idSet.add(count);
+    }
+
+
+
+    public static void clear(){
+        idSet.clear();
+        count = 1;
+    }
+
+    public static HashSet<Integer> getIdSet() {
+        return idSet;
+    }
+
+}
