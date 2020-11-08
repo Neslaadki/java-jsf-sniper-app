@@ -24,22 +24,11 @@ public class EntryBean {
     @EJB
     EJB_Connector connector;
 
-    public void addToResultList(PointBean bean){
-        this.dataList.add(dataList.size(), bean);
-    }
-
-    public PointBean selectFromResultBean(){
-        return dataList.get(0);
-    }
-
     public List<PointBean> getDataList() {
         setDataList(connector.updateList());
         return dataList;
     }
 
-    public int getListSize(){
-        return dataList.size();
-    }
 
     private void setDataList(List<PointBean> list){
         dataList = list;

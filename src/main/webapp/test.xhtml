@@ -118,6 +118,11 @@
                                     <f:facet name="header">Попал?</f:facet>
                                     <h:outputText value="#{entry.hit}"/>
                                 </h:column>
+
+                                <h:column>
+                                    <f:facet name="header">Время отправки</f:facet>
+                                    <h:outputText value="#{entry.dateCreation}"/>
+                                </h:column>
                             </h:dataTable>
                         </div>
                         <h:form>
