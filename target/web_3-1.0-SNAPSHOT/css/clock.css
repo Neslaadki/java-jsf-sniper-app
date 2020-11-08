@@ -1,0 +1,21 @@
+body{
+    background: black;
+}
+
+.clock {
+    vertical-align: middle;
+    margin: 15%;
+}
+
+.clock p {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+}
+
+#clock {
+    text-align: center;
+    color: white;
+    border-style: dashed;
+    border-color: white;
+}
