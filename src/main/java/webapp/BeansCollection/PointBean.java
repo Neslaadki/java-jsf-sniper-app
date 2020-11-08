@@ -74,5 +74,4 @@ public class PointBean implements Serializable {
     public void addToDB() {
         add_isSuccess = connector.addEntity(x, y, r, getHit());
     }
-
 }
