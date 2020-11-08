@@ -68,38 +68,22 @@
                             <!--X Coordinate-->
                             <div class="item_x">
                                 <label> Координата X
-                                    <h:inputText name="X" value="#{requestBean.x}"/>
+                                    <h:inputText name="X" value="#{pointBean.x}"/>
                                     <br/>
-                                    <!--                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="-2"/>-2</label>-->
-                                    <!--                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="-1.5"/>-1.5</label>-->
-                                    <!--                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="-1"/>-1</label>-->
-                                    <!--                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="-0.5"/>-0.5</label>-->
-                                    <!--                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="0"/>0</label>-->
-                                    <!--                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="0.5"/>0.5</label>-->
-                                    <!--                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="1.0"/>1.0</label>-->
-                                    <!--                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="1.5"/>1.5</label>-->
-                                    <!--                                    <label class="checkbox-label"><input type="checkbox" name="x_value" value="2"/>2</label>-->
                                 </label>
                             </div>
 
                             <!--Y Coordinate-->
                             <div class="item_y">
                                 <label> Координата Y -
-                                    <h:inputText name="Y" value="#{requestBean.y}"/>
-                                    <!--                                    <input class="y" size="12px" id="y_value" name="y_value" type="text" maxlength="8"/>-->
+                                    <h:inputText name="Y" value="#{pointBean.y}"/>
                                 </label>
                             </div>
 
                             <!--R Radius-->
                             <div class="item_radius">
                                 <label id="r_value"> Радиус R
-                                    <br/>
-                                    <h:inputText name="R" value="#{requestBean.r}"/>
-                                    <!--                                    <label class="checkbox-label"><input type="checkbox" name="r_value" value="1" />1</label>-->
-                                    <!--                                    <label class="checkbox-label"><input type="checkbox" name="r_value" value="2" />2</label>-->
-                                    <!--                                    <label class="checkbox-label"><input type="checkbox" name="r_value" value="3" />3</label>-->
-                                    <!--                                    <label class="checkbox-label"><input type="checkbox" name="r_value" value="4" />4</label>-->
-                                    <!--                                    <label class="checkbox-label"><input type="checkbox" name="r_value" value="5" />5</label>-->
+                                    <h:inputText name="R" value="#{pointBean.r}"/>
                                 </label>
                             </div>
 
@@ -107,27 +91,27 @@
                             <div>
                                 <!--                                <button class="send" type="submit"  id="send" onclick="return validation()"> Отправить </button>-->
                                 <!--                                <button class="reset" type="reset" > Сбросить </button>-->
-                                <h:commandLink value="Отправить" action="#{entryBean.addToResultList(requestBean)}"/>
+                                <h:commandLink value="Отправить" action="#{pointBean.addToDB}"/>
                             </div>
                         </h:form>
                     </div>
                     <div>
                         <div class="mobile-table">
-                            <h:dataTable value="#{entryBean.dataList}" var="entry"
-                                         style="width: auto; border-width:2px;">
+                            <h:dataTable class="iksweb" value="#{entryBean.dataList}" var="entry"
+                                         >
                                 <h:column>
                                     <f:facet name="header">X</f:facet>
-                                    <h:outputText value="#{entry.x}"/>
+                                    <h:outputText type="number" value="#{entry.x}"/>
                                 </h:column>
 
                                 <h:column>
                                     <f:facet name="header">Y</f:facet>
-                                    <h:outputText value="#{entry.y}"/>
+                                    <h:outputText type="number" value="#{entry.y}"/>
                                 </h:column>
 
                                 <h:column>
                                     <f:facet name="header">R</f:facet>
-                                    <h:outputText value="#{entry.r}"/>
+                                    <h:outputText type="number" value="#{entry.r}"/>
                                 </h:column>
 
                                 <h:column>
@@ -136,9 +120,9 @@
                                 </h:column>
                             </h:dataTable>
                         </div>
-                        <form action="Cleaner">
-                            <button class="resetTable" type="submit" id="clean_button"> Очистить таблицу</button>
-                        </form>
+                        <h:form>
+                            <h:commandLink class="resetTable" id="clean_button" value="Очистить" action="#{entryBean.cleanList}"/>
+                        </h:form>
                     </div>
                 </div>
             </div>

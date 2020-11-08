@@ -1,3 +1,5 @@
-/Users/antondzubak/Desktop/javaEE_dev/sources/web_3/src/main/java/webapp/BeansCollection/ExamplePoint.java
+/Users/antondzubak/Desktop/javaEE_dev/sources/web_3/src/main/java/webapp/BeansCollection/PointBean.java
 /Users/antondzubak/Desktop/javaEE_dev/sources/web_3/src/main/java/webapp/BeansCollection/EntryBean.java
-/Users/antondzubak/Desktop/javaEE_dev/sources/web_3/src/main/java/webapp/BeansCollection/EntityBean.java
+/Users/antondzubak/Desktop/javaEE_dev/sources/web_3/src/main/java/webapp/db/EJB_Connector.java
+/Users/antondzubak/Desktop/javaEE_dev/sources/web_3/src/main/java/webapp/db/IdGenerator.java
+/Users/antondzubak/Desktop/javaEE_dev/sources/web_3/src/main/java/webapp/db/PointEntity.java

@@ -2,6 +2,10 @@ package webapp.BeansCollection;
 
 
 
+import webapp.db.EJB_Connector;
+import webapp.db.IdGenerator;
+
+import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.inject.Inject;
@@ -12,20 +16,24 @@ import java.util.List;
 @SessionScoped
 @ManagedBean(name = "entryBean")
 public class EntryBean {
-    private final List<EntityBean> dataList = new ArrayList<>();
+    private List<PointBean> dataList = new ArrayList<>();
 
     @Inject
-    public EntityBean bean;
+    public PointBean bean;
 
-    public void addToResultList(EntityBean bean){
+    @EJB
+    EJB_Connector connector;
+
+    public void addToResultList(PointBean bean){
         this.dataList.add(dataList.size(), bean);
     }
 
-    public EntityBean selectFromResultBean(){
+    public PointBean selectFromResultBean(){
         return dataList.get(0);
     }
 
-    public List<EntityBean> getDataList() {
+    public List<PointBean> getDataList() {
+        setDataList(connector.updateList());
         return dataList;
     }
 
@@ -33,4 +41,16 @@ public class EntryBean {
         return dataList.size();
     }
 
+    private void setDataList(List<PointBean> list){
+        dataList = list;
+    }
+
+    public void cleanList(){
+        if (!dataList.isEmpty()){
+            if(connector.cleanTable()){
+                IdGenerator.clear();
+                dataList.clear();
+            }
+        }
+    }
 }

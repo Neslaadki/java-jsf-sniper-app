@@ -5,6 +5,7 @@
       <configuration>
         <setting name="validation-enabled" value="true" />
         <datasource-mapping>
+          <factory-entry name="com.tuneit.namePU" />
           <factory-entry name="examplePU" />
           <factory-entry name="web_3" />
         </datasource-mapping>

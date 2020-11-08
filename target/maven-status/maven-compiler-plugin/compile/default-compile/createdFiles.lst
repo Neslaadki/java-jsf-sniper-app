@@ -1,3 +1,5 @@
-webapp/BeansCollection/EntityBean.class
+webapp/BeansCollection/PointBean.class
+webapp/db/EJB_Connector.class
 webapp/BeansCollection/EntryBean.class
-webapp/BeansCollection/ExamplePoint.class
+webapp/db/IdGenerator.class
+webapp/db/PointEntity.class
