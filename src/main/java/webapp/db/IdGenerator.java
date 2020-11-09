@@ -31,10 +31,9 @@ public class IdGenerator {
         idSet.add(count);
     }
 
-    public static void setIdSet(EntityManager entityManager) {
+    public static void setIdSet(List<PointEntity> pointBeansId) {
         clear();
-        List<PointEntity> pointBeans = entityManager.createQuery("select entity from PointEntity entity").getResultList();
-        for (PointEntity pointEntities : pointBeans) {
+        for (PointEntity pointEntities : pointBeansId) {
             idSet.add(Integer.valueOf(pointEntities.getId()));
         }
     }
