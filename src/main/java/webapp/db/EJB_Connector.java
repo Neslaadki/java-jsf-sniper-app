@@ -30,6 +30,7 @@ public class EJB_Connector {
 
     public  List<PointBean>  updateList(){
         List<PointEntity> pointBeansId = entityManager.createQuery("select entity from PointEntity entity").getResultList();
+        IdGenerator.clear();
         for (PointEntity points: pointBeansId) {
             IdGenerator.getIdSet().add(Integer.valueOf(points.getId()));
         }
