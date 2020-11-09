@@ -18,9 +18,6 @@ public class PointEntity implements InterfacePointEntity {
     private boolean hit;
     private Date dateCreation;
 
-    public PointEntity(){
-        setId();
-    }
 
     @Override
     public void setDateCreation(Date dateCreation) {

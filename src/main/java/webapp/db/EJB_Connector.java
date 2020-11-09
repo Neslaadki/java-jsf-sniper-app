@@ -16,6 +16,8 @@ public class EJB_Connector {
 
     public boolean addEntity(double x, double y, double r, boolean hit){
         PointEntity pointEntity = new PointEntity();
+        pointEntity.setId();
+        //while (!entityManager.createQuery("select entity from PointEntity entity where id =" + pointEntity.getId()).getResultList().isEmpty()) pointEntity.setId();
         pointEntity.setX(x);
         pointEntity.setY(y);
         pointEntity.setR(r);

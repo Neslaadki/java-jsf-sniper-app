@@ -10,7 +10,7 @@ body{
 .clock p {
     text-align: center;
     color: white;
-    font-size: 40px;
+    font-size: 70px;
 }
 
 #clock {
@@ -18,4 +18,5 @@ body{
     color: white;
     border-style: dashed;
     border-color: white;
+    font-size: 120px;
 }
