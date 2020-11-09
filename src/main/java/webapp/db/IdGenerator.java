@@ -30,13 +30,7 @@ public class IdGenerator {
     public static void put(Integer id) {
         idSet.add(count);
     }
-
-    public static void setIdSet(List<PointEntity> pointBeansId) {
-        clear();
-        for (PointEntity pointEntities : pointBeansId) {
-            idSet.add(Integer.valueOf(pointEntities.getId()));
-        }
-    }
+    
 
     public static void clear() {
         idSet.clear();
