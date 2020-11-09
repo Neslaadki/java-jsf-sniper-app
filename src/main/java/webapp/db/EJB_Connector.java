@@ -8,8 +8,6 @@ import javax.persistence.PersistenceContext;
 import java.util.Date;
 import java.util.List;
 
-import static webapp.db.IdGenerator.getIdSet;
-import static webapp.db.IdGenerator.setIdSet;
 
 @Stateless
 public class EJB_Connector {
@@ -33,7 +31,7 @@ public class EJB_Connector {
     public  List<PointBean>  updateList(){
         List<PointEntity> pointBeansId = entityManager.createQuery("select entity from PointEntity entity").getResultList();
         for (PointEntity points: pointBeansId) {
-            getIdSet().add(Integer.valueOf(points.getId()));
+            IdGenerator.getIdSet().add(Integer.valueOf(points.getId()));
         }
         return entityManager.createQuery("select entity from PointEntity entity").getResultList();
     }

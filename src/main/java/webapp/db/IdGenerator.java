@@ -30,7 +30,7 @@ public class IdGenerator {
     public static void put(Integer id) {
         idSet.add(count);
     }
-    
+
 
     public static void clear() {
         idSet.clear();
