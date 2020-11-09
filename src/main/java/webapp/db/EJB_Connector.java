@@ -8,6 +8,8 @@ import javax.persistence.PersistenceContext;
 import java.util.Date;
 import java.util.List;
 
+import static webapp.db.IdGenerator.setIdSet;
+
 @Stateless
 public class EJB_Connector {
 
@@ -27,15 +29,13 @@ public class EJB_Connector {
         return true;
     }
 
-    public List<PointBean> updateList(){
+    public  List<PointBean>  updateList(){
+        setIdSet(entityManager);
         return entityManager.createQuery("select entity from PointEntity entity").getResultList();
     }
+
 
     public boolean cleanTable(){
         return entityManager.createQuery("DELETE FROM PointEntity entity").executeUpdate() > 0;
     }
-
-
-
-
 }

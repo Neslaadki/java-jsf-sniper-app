@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:p="http://java.sun.com/jsf/facelets"
+      xsi:schemaLocation="http://primefaces.org/ui/extensions">
+<h:head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Начало работы</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="css/clock.css"/>
+</h:head>
+<h:body>
+    <div class="clock">
+        <p>Время:</p>
+        <h1 id="clock">00:00:00</h1>
+        <script type="application/javascript" src="js/clock.js"></script>
+    </div>
+    <div class="mainPage_link">
+<!--        <h:outputLink value="main.xhtml">Нажмите сюда, чтобы перейти на главную страницу</h:outputLink>-->
+        <label>
+            <h:link value = "Кликай сюда!" outcome = "main.xhtml"/>
+        </label>
+    </div>
+<!--    -->
+</h:body>
+</html>

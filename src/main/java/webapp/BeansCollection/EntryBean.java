@@ -10,7 +10,9 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.inject.Inject;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+
 
 
 @SessionScoped
@@ -28,6 +30,7 @@ public class EntryBean {
         setDataList(connector.updateList());
         return dataList;
     }
+
 
 
     private void setDataList(List<PointBean> list){
