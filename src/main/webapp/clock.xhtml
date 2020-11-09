@@ -17,31 +17,7 @@
     <div class="clock">
         <p>Время:</p>
         <h1 id="clock">00:00:00</h1>
-        <script type="application/javascript">
-            var clock = document.getElementById('clock');
-
-            function Timer() {
-                var time = new Date();
-                var h = (time.getHours() % 24).toString();
-                var m = time.getMinutes().toString();
-                var s = time.getSeconds().toString();
-
-                if (h.length &lt; 2) {
-                    h = '0' + h;
-                }
-                if (m.length &lt; 2) {
-                    m = '0' + m;
-                }
-                if (s.length &lt; 2) {
-                    s = '0' + s;
-                }
-
-                clock.textContent = h + ':' + m + ':' + s;
-            }
-
-            Timer();
-            setInterval(Timer, 13000);
-        </script>
+        <script type="application/javascript" src="js/clock.js"></script>
     </div>
     <div class="mainPage_link">
 <!--        <h:outputLink value="main.xhtml">Нажмите сюда, чтобы перейти на главную страницу</h:outputLink>-->
