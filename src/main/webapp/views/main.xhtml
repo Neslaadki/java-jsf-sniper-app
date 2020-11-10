@@ -10,9 +10,9 @@
 <h:head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Работа №3</title>
-    <link rel="stylesheet" href="css/style.css"/>
-    <link rel="stylesheet" href="css/form_style.css"/>
-    <link rel="stylesheet" href="css/buttons_style.css"/>
+    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="../css/form_style.css"/>
+    <link rel="stylesheet" href="../css/buttons_style.css"/>
 </h:head>
 <h:body>
     <div class="header">
@@ -64,13 +64,23 @@
             <div class="block__column">
                 <div class="block__item">
                     <div class='style_block'>
-                        <h:form class="form" id="_form" onsubmit="return validation()">
-
+                        <h:form class="form" id="_form">
+<!--                            onsubmit="return validation()-->
                             <!--X Coordinate-->
                             <div class="item_x">
                                 <label> Координата X
                                     <h:inputText name="X" value="#{pointBean.x}"/>
                                     <br/>
+                                </label>
+                                <label> Координата X
+                                    <h:selectBooleanCheckbox name="x_value" value="#{pointBean.is_x}" label="-3" />
+                                    <h:selectBooleanCheckbox name="x_value" value="#{pointBean.is_x}" label="-2" />
+                                    <h:selectBooleanCheckbox name="x_value" value="#{pointBean.is_x}" label="-1" />
+                                    <h:selectBooleanCheckbox name="x_value" value="#{pointBean.is_x}" label="0" />
+                                    <h:selectBooleanCheckbox name="x_value" value="#{pointBean.is_x}" label="1" />
+                                    <h:selectBooleanCheckbox name="x_value" value="#{pointBean.is_x}" label="2" />
+                                    <h:selectBooleanCheckbox name="x_value" value="#{pointBean.is_x}" label="3" />
+                                    <h:selectBooleanCheckbox name="x_value" value="#{pointBean.is_x}" label="4" />
                                 </label>
                             </div>
 
@@ -90,44 +100,49 @@
 
                             <!--Buttons-->
                             <div>
-                                <!--                                <button class="send" type="submit"  id="send" onclick="return validation()"> Отправить </button>-->
-                                <!--                                <button class="reset" type="reset" > Сбросить </button>-->
-                                <h:commandLink value="Отправить" action="#{pointBean.addToDB}"/>
+                                <h:commandButton value="Создать точку" action="#{pointBean.addToDB}">
+                                    <f:ajax execute="_form" render="pointsTable"/>
+                                </h:commandButton>
                             </div>
+
                         </h:form>
                     </div>
                     <div>
                         <div class="mobile-table">
-                            <h:dataTable class="iksweb" value="#{entryBean.dataList}" var="entry"
-                                         >
-                                <h:column>
-                                    <f:facet name="header">X</f:facet>
-                                    <h:outputText type="number" value="#{entry.x}"/>
-                                </h:column>
+                            <h:panelGroup id="pointsTable">
+                                <h:dataTable class="iksweb" value="#{entryBean.dataList}" var="entry"
+                                             >
+                                    <h:column>
+                                        <f:facet name="header">X</f:facet>
+                                        <h:outputText type="number" value="#{entry.x}"/>
+                                    </h:column>
 
-                                <h:column>
-                                    <f:facet name="header">Y</f:facet>
-                                    <h:outputText type="number" value="#{entry.y}"/>
-                                </h:column>
+                                    <h:column>
+                                        <f:facet name="header">Y</f:facet>
+                                        <h:outputText type="number" value="#{entry.y}"/>
+                                    </h:column>
 
-                                <h:column>
-                                    <f:facet name="header">R</f:facet>
-                                    <h:outputText type="number" value="#{entry.r}"/>
-                                </h:column>
+                                    <h:column>
+                                        <f:facet name="header">R</f:facet>
+                                        <h:outputText type="number" value="#{entry.r}"/>
+                                    </h:column>
 
-                                <h:column>
-                                    <f:facet name="header">Попал?</f:facet>
-                                    <h:outputText value="#{entry.hit}"/>
-                                </h:column>
+                                    <h:column>
+                                        <f:facet name="header">Попал?</f:facet>
+                                        <h:outputText value="#{entry.hit}"/>
+                                    </h:column>
 
-                                <h:column>
-                                    <f:facet name="header">Время отправки</f:facet>
-                                    <h:outputText value="#{entry.dateCreation}"/>
-                                </h:column>
-                            </h:dataTable>
+                                    <h:column>
+                                        <f:facet name="header">Время отправки</f:facet>
+                                        <h:outputText value="#{entry.dateCreation}"/>
+                                    </h:column>
+                                </h:dataTable>
+                            </h:panelGroup>
                         </div>
                         <h:form>
-                            <h:commandLink class="resetTable" id="clean_button" value="Очистить" action="#{entryBean.cleanList}"/>
+                            <h:commandButton id="clean_button" value="Очистить таблицу" action="#{entryBean.cleanList}">
+                                <f:ajax render="pointsTable"/>
+                            </h:commandButton>
                         </h:form>
                     </div>
                 </div>

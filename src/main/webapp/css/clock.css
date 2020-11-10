@@ -3,6 +3,7 @@ body{
 }
 
 .clock {
+    min-width: content-box;
     vertical-align: middle;
     margin: 15%;
 }
@@ -10,7 +11,7 @@ body{
 .clock p {
     text-align: center;
     color: white;
-    font-size: 70px;
+    font-size: 400%;
 }
 
 #clock {
@@ -18,5 +19,5 @@ body{
     color: white;
     border-style: dashed;
     border-color: white;
-    font-size: 120px;
+    font-size: 550%;
 }

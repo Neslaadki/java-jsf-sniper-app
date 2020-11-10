@@ -18,6 +18,16 @@ public class PointBean implements Serializable {
     private double r;
     private boolean hit = false;
     private Date dateCreation;
+    private boolean is_x;
+
+    public boolean isIs_x() {
+        return is_x;
+    }
+
+    public void setIs_x(boolean is_x) {
+        this.is_x = is_x;
+    }
+
     // поле времени выполнения
     private boolean add_isSuccess;
 
