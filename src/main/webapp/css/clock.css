@@ -5,7 +5,7 @@ body{
 .clock {
     min-width: content-box;
     vertical-align: middle;
-    margin: 15%;
+    margin: 10%;
 }
 
 .clock p {

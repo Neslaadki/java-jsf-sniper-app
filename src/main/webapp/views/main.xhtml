@@ -16,9 +16,7 @@
 </h:head>
 <h:body>
     <div class="header">
-        <h1>
-            Разработать приложение на базе JavaServer Faces Framework, которое осуществляет проверку попадания точки в заданную область на координатной плоскости.
-        </h1>
+        <p:include src="../views/headersNames.xhtml"/>
     </div>
     <div class="content">
         <div class="block">
@@ -68,10 +66,10 @@
 <!--                            onsubmit="return validation()-->
                             <!--X Coordinate-->
                             <div class="item_x">
-                                <label> Координата X
-                                    <h:inputText name="X" value="#{pointBean.x}"/>
-                                    <br/>
-                                </label>
+<!--                                <label> Координата X-->
+<!--                                    <h:inputText name="X" value="#{pointBean.x}"/>-->
+<!--                                    <br/>-->
+<!--                                </label>-->
                                 <label> Координата X
                                     <h:selectBooleanCheckbox name="x_value" value="#{pointBean.is_x}" label="-3" />
                                     <h:selectBooleanCheckbox name="x_value" value="#{pointBean.is_x}" label="-2" />
