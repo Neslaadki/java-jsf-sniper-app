@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../css/style.css"/>
     <link rel="stylesheet" href="../css/form_style.css"/>
     <link rel="stylesheet" href="../css/buttons_style.css"/>
+    <script type="application/javascript" src="../js/response.js"></script>
 </h:head>
 <h:body>
     <div class="header">
@@ -67,14 +68,14 @@
                             <!--X Coordinate-->
                             <div class="item_x" id="checkbox_x">
                                 <label> Координата X
-                                    <h:inputText name="X" value="#{pointBean.x}" style="display: none; visibility: hidden"/>
-                                    <p:selectBooleanCheckbox itemLabel="-3" />
-                                    <p:selectBooleanCheckbox itemLabel="-2" />
-                                    <p:selectBooleanCheckbox itemLabel="-1" />
-                                    <p:selectBooleanCheckbox itemLabel="0" />
-                                    <p:selectBooleanCheckbox itemLabel="1" />
-                                    <p:selectBooleanCheckbox itemLabel="2" />
-                                    <p:selectBooleanCheckbox itemLabel="3" />
+                                    <h:inputText id="x_value" name="X" value="#{pointBean.x}" style="display: none; visibility: hidden"/>
+                                    <p:selectBooleanCheckbox class="x_value" itemLabel="-3" value="-3" onchange="setX(-3)"/>
+                                    <p:selectBooleanCheckbox class="x_value" itemLabel="-2" value="-2" onchange="setX(-2)"/>
+                                    <p:selectBooleanCheckbox class="x_value" itemLabel="-1" value="-1" onchange="setX(-1)"/>
+                                    <p:selectBooleanCheckbox class="x_value" itemLabel="0" value="0" onchange="setX(0)"/>
+                                    <p:selectBooleanCheckbox class="x_value" itemLabel="1" value="1" onchange="setX(1)"/>
+                                    <p:selectBooleanCheckbox class="x_value" itemLabel="2" value="2" onchange="setX(2)"/>
+                                    <p:selectBooleanCheckbox class="x_value" itemLabel="3" value="3" onchange="setX(3)"/>
                                     <br/>
                                 </label>
                             </div>
@@ -144,6 +145,5 @@
             </div>
         </div>
     </div>
-
 </h:body>
 </html>

@@ -1,5 +1,3 @@
-$('#checkbox_x input:checkbox').click(function(){
-    if ($(this).is(':checked')) {
-        $('#checkbox_x input:checkbox').not(this).prop('checked', false);
-    }
-});
+function setX(x){
+    document.getElementById('_form:x_value').setAttribute('value',x);
+}
