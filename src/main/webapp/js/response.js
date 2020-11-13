@@ -1,4 +1,4 @@
-function setX(name_variable, value_variable) {
+function setValue(name_variable, value_variable) {
     if (name_variable === 'x') {
         document.getElementById('_form:x_value').setAttribute('value', value_variable);
         for (let i = 16; i <= 22; i++) {
