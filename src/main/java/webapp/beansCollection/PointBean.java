@@ -1,12 +1,15 @@
-package webapp.BeansCollection;
+package webapp.beansCollection;
 
 import webapp.db.EJB_Connector;
 
 import javax.ejb.EJB;
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
 import java.io.Serializable;
-import java.util.Date;
+import java.lang.reflect.Array;
+import java.util.*;
 
 
 @ManagedBean(name = "pointBean")
@@ -18,15 +21,8 @@ public class PointBean implements Serializable {
     private double r;
     private boolean hit = false;
     private Date dateCreation;
-    private boolean is_x;
 
-    public boolean isIs_x() {
-        return is_x;
-    }
 
-    public void setIs_x(boolean is_x) {
-        this.is_x = is_x;
-    }
 
     // поле времени выполнения
     private boolean add_isSuccess;
@@ -83,4 +79,10 @@ public class PointBean implements Serializable {
     public void addToDB() {
         add_isSuccess = connector.addEntity(x, y, r, getHit());
     }
+
+
+
+
+
+
 }

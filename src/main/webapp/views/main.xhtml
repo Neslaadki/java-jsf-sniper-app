@@ -4,17 +4,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xmlns:p="http://java.sun.com/jsf/facelets"
-      xsi:schemaLocation="http://primefaces.org/ui/extensions">
+      xmlns:p="http://primefaces.org/ui">
 <h:head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Работа №3</title>
     <link rel="stylesheet" href="../css/style.css"/>
     <link rel="stylesheet" href="../css/form_style.css"/>
     <link rel="stylesheet" href="../css/buttons_style.css"/>
+
 </h:head>
 <h:body>
+
     <div class="header">
         <h1>
             Разработать приложение на базе JavaServer Faces Framework, которое осуществляет проверку попадания точки в заданную область на координатной плоскости.
@@ -65,22 +65,16 @@
                 <div class="block__item">
                     <div class='style_block'>
                         <h:form class="form" id="_form">
-<!--                            onsubmit="return validation()-->
-                            <!--X Coordinate-->
-                            <div class="item_x">
+                            <div class="item_x" id="checkbox_x">
                                 <label> Координата X
-                                    <h:inputText name="X" value="#{pointBean.x}"/>
-                                    <br/>
-                                </label>
-                                <label> Координата X
-                                    <h:selectBooleanCheckbox name="x_value" value="#{pointBean.is_x}" label="-3" />
-                                    <h:selectBooleanCheckbox name="x_value" value="#{pointBean.is_x}" label="-2" />
-                                    <h:selectBooleanCheckbox name="x_value" value="#{pointBean.is_x}" label="-1" />
-                                    <h:selectBooleanCheckbox name="x_value" value="#{pointBean.is_x}" label="0" />
-                                    <h:selectBooleanCheckbox name="x_value" value="#{pointBean.is_x}" label="1" />
-                                    <h:selectBooleanCheckbox name="x_value" value="#{pointBean.is_x}" label="2" />
-                                    <h:selectBooleanCheckbox name="x_value" value="#{pointBean.is_x}" label="3" />
-                                    <h:selectBooleanCheckbox name="x_value" value="#{pointBean.is_x}" label="4" />
+                                    <p:selectBooleanCheckbox itemLabel="-3" name="x_value" />
+                                    <p:selectBooleanCheckbox itemLabel="-2" name="x_value"/>
+                                    <p:selectBooleanCheckbox itemLabel="-1" name="x_value"/>
+                                    <p:selectBooleanCheckbox itemLabel="0" name="x_value"/>
+                                    <p:selectBooleanCheckbox itemLabel="1" name="x_value"/>
+                                    <p:selectBooleanCheckbox itemLabel="2" name="x_value"/>
+                                    <p:selectBooleanCheckbox itemLabel="3" name="x_value"/>
+                                    <p:inputText value="#{pointBean.x}"/>
                                 </label>
                             </div>
 
@@ -151,4 +145,6 @@
     </div>
 
 </h:body>
+<script type="application/javascript" src="https://code.jquery.com/jquery-3.5.1.js" ></script>
 </html>
+
