@@ -1,5 +1,5 @@
 body {
-    background-image: url(../img/background.jpg);
+    background-image: url(../img/audi.jpg);
     background-repeat: no-repeat;
     background-color: rgb(74, 116, 91);
 }
@@ -43,7 +43,7 @@ a {
 
 .block__item {
     border: 20px solid rgb(0, 0, 0);
-    width: 500px;
+    width: 600px;
     height: 450px;
     text-align: center;
     background-color: rgba(192, 192, 192, 0.9);

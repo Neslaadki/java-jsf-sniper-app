@@ -21,3 +21,9 @@ body{
     border-color: white;
     font-size: 550%;
 }
+
+.mainPage_link{
+    border: inset white 10px ;
+    position: center;
+    text-align: center;
+}
