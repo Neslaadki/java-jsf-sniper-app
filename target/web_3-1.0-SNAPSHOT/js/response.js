@@ -24,21 +24,21 @@ function setValue(name_variable, value_variable) {
         r_is_selected = true;
         var number;
         if (value_variable === 1) {
-            number = 26;
+            number = 25;
         }
         if (value_variable === 1.5) {
-            number = 27;
+            number = 26;
         }
         if (value_variable === 2) {
-            number = 28;
+            number = 27;
         }
         if (value_variable === 2.5) {
-            number = 29;
+            number = 28;
         }
         if (value_variable === 3) {
-            number = 30;
+            number = 29;
         }
-        for (let i = 26; i <= 30; i++) {
+        for (let i = 25; i <= 29; i++) {
             if (i !== number) {
                 document.getElementById('_form:j_idt' + i).getElementsByClassName("ui-chkbox-box ui-widget ui-corner-all ui-state-default")[0].children[0].setAttribute('class', '.ui-chkbox-icon ui-icon ui-c ui-icon-blank');
                 document.getElementById('_form:j_idt' + i).getElementsByClassName("ui-chkbox-box ui-widget ui-corner-all ui-state-default")[0].setAttribute('class', 'ui-chkbox-box ui-widget ui-corner-all ui-state-default');
@@ -51,8 +51,17 @@ function setValue(name_variable, value_variable) {
 }
 
 function validator() {
-    if (!x_is_selected) message += "Не выбрано значение X \n";
-    if (!r_is_selected) message += "Не выбрано значение R";
-    if (message.length !== 0) alert(message);
-    message = "";
+    // if (!x_is_selected) message += "Не выбрано значение X \n";
+    // if (!r_is_selected) message += "Не выбрано значение R";
+    // if (message.length !== 0) alert(message);
+    // message = "";
+    if(x_is_selected && r_is_selected){
+        PF('myButton').enable();
+        return true;
+    }else {
+        return false;
+    }
+
 }
+
+validator();

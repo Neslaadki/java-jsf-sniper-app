@@ -81,7 +81,7 @@
                             <!--Y Coordinate-->
                             <div class="item_y">
                                 <label> Координата Y (от -3 до 5) -
-                                    <h:inputText name="Y" placeholder="от -3 до 5" value="#{pointBean.y}"/>
+                                    <h:inputText id="y_value" name="Y" placeholder="от -3 до 5" value="#{pointBean.y}"/>
                                 </label>
                             </div>
 
@@ -99,7 +99,7 @@
                             </div>
                             <!--Buttons-->
                             <div>
-                                <p:commandButton value="Создать точку"  onclick="validator()" disabled="true" action="#{pointBean.addToDB}" style="width: 140px; height: 20px;font-size:10px;color:black;background-image:none;background-color: black; border: white solid 1px" >
+                                <p:commandButton id="com_button" value="Создать точку" disabled="true" widgetVar="myButton" action="#{pointBean.addToDB}" style="width: 140px; height: 20px;font-size:10px;color:black;background-image:none;background-color: black; border: white solid 1px" >
                                     <f:ajax execute="_form" render="pointsTable"/>
                                 </p:commandButton>
                             </div>
