@@ -99,7 +99,7 @@
                             </div>
                             <!--Buttons-->
                             <div>
-                                <p:commandButton value="Создать точку"  onclick="validator()" disabled="false" action="#{pointBean.addToDB}" style="width: 140px; height: 20px;font-size:10px;color:black;background-image:none;background-color: black; border: white solid 1px" >
+                                <p:commandButton value="Создать точку"  onclick="validator()" disabled="true" action="#{pointBean.addToDB}" style="width: 140px; height: 20px;font-size:10px;color:black;background-image:none;background-color: black; border: white solid 1px" >
                                     <f:ajax execute="_form" render="pointsTable"/>
                                 </p:commandButton>
                             </div>
