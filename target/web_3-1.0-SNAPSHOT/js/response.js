@@ -1,13 +1,13 @@
 let radiusValue;
-let x_is_selected = false;
-let r_is_selected = false;
+let y_value = document.getElementById('y_value');
 let message = "";
-
+let x_value = false;
+let r_value = false;
 
 function setValue(name_variable, value_variable) {
     if (name_variable === 'x') {
         document.getElementById('_form:x_value').setAttribute('value', value_variable);
-        x_is_selected = true;
+        x_value=true;
         for (let i = 16; i <= 22; i++) {
             if (i !== value_variable + 19) {
                 document.getElementById('_form:j_idt' + i).getElementsByClassName("ui-chkbox-box ui-widget ui-corner-all ui-state-default")[0].children[0].setAttribute('class', '.ui-chkbox-icon ui-icon ui-c ui-icon-blank');
@@ -21,7 +21,7 @@ function setValue(name_variable, value_variable) {
     if (name_variable === 'r') {
         document.getElementById('_form:r_value').setAttribute('value', value_variable)
         radiusValue = value_variable;
-        r_is_selected = true;
+        r_value=true;
         var number;
         if (value_variable === 1) {
             number = 25;
@@ -51,9 +51,17 @@ function setValue(name_variable, value_variable) {
 }
 
 function validator() {
-    if (!x_is_selected) message += "Не выбрано значение X \n";
-    if (!r_is_selected) message += "Не выбрано значение R";
-    if (message.length !== 0) alert(message);
     message = "";
-
+    if (x_value === false) {
+        message += "некорректно ведено значение x<br>";
+    }
+    try{
+        y_value.value;
+    }catch (e){
+        message += "некорректно ведено значение y<br>";
+    }
+    if (r_value === false) {
+        message += "некорректно ведено значение r <br>";
+    }
+    document.getElementById('error_message').innerHTML = message;
 }

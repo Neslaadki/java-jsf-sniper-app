@@ -24,9 +24,10 @@ public class PointBean implements Serializable {
     private boolean hit = false;
     private Date dateCreation;
 
-
     // поле времени выполнения
     private boolean add_isSuccess;
+
+
 
     @EJB
     private EJB_Connector connector;

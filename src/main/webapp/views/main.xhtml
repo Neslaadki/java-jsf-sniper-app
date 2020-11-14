@@ -61,7 +61,7 @@
             <div class="block__column">
                 <div class="block__item">
                     <div class='style_block'>
-                        <h:form class="form" id="_form">
+                        <h:form class="form" id="_form" onsubmit="return validator()">
 <!--                            onsubmit="return validation()-->
                             <!--X Coordinate-->
                             <div class="item_x" id="checkbox_x">
@@ -99,7 +99,10 @@
                             </div>
                             <!--Buttons-->
                             <div>
-                                <p:commandButton id="com_button" value="Создать точку"  widgetVar="myButton" action="#{pointBean.addToDB}" style="width: 140px; height: 20px;font-size:10px;color:black;background-image:none;background-color: black; border: white solid 1px" >
+                                <span id="error_message" style="font-size: 20px"></span>
+                            </div>
+                            <div>
+                                <p:commandButton id="com_button" onclick="validator()" value="Создать точку"  widgetVar="myButton" action="#{pointBean.addToDB}" style="width: 140px; height: 20px;font-size:10px;color:black;background-image:none;background-color: black; border: white solid 1px" >
                                     <f:ajax execute="_form" render="pointsTable"/>
                                 </p:commandButton>
                             </div>
