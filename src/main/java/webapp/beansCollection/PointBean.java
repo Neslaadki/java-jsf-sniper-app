@@ -18,12 +18,11 @@ import java.util.*;
 @RequestScoped
 public class PointBean implements Serializable {
 
-    private double x;
-    private double y;
-    private double r;
+    private Double x;
+    private Double y;
+    private Double r;
     private boolean hit = false;
     private Date dateCreation;
-
 
 
     // поле времени выполнения
@@ -32,27 +31,28 @@ public class PointBean implements Serializable {
     @EJB
     private EJB_Connector connector;
 
-    public double getX() {
+    public Double getX() {
         return x;
     }
 
-    public void setX(double x) {
+    public void setX(Double x) {
+
         this.x = x;
     }
 
-    public double getY() {
+    public Double getY() {
         return y;
     }
 
-    public void setY(double y) {
+    public void setY(Double y) {
         this.y = y;
     }
 
-    public double getR() {
+    public Double getR() {
         return r;
     }
 
-    public void setR(double r) {
+    public void setR(Double r) {
         this.r = r;
     }
 

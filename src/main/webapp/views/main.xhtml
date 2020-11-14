@@ -66,7 +66,7 @@
                             <!--X Coordinate-->
                             <div class="item_x" id="checkbox_x">
                                 <label> Координата X -
-                                    <h:inputText id="x_value" name="X" value="#{pointBean.x}" style="display: none; visibility: hidden"/>
+                                    <h:inputText id="x_value" name="X" value="${pointBean.x}" style="display: none; visibility: hidden"/>
                                     <p:selectBooleanCheckbox class="x_value" itemLabel="-3" value="-3" onchange="setValue('x',-3)"/>
                                     <p:selectBooleanCheckbox class="x_value" itemLabel="-2" value="-2" onchange="setValue('x',-2)"/>
                                     <p:selectBooleanCheckbox class="x_value" itemLabel="-1" value="-1" onchange="setValue('x',-1)"/>
@@ -99,7 +99,7 @@
                             </div>
                             <!--Buttons-->
                             <div>
-                                <p:commandButton id="com_button" value="Создать точку" disabled="true" widgetVar="myButton" action="#{pointBean.addToDB}" style="width: 140px; height: 20px;font-size:10px;color:black;background-image:none;background-color: black; border: white solid 1px" >
+                                <p:commandButton id="com_button" value="Создать точку"  widgetVar="myButton" action="#{pointBean.addToDB}" style="width: 140px; height: 20px;font-size:10px;color:black;background-image:none;background-color: black; border: white solid 1px" >
                                     <f:ajax execute="_form" render="pointsTable"/>
                                 </p:commandButton>
                             </div>
@@ -108,8 +108,7 @@
                     <div>
                         <div class="mobile-table">
                             <h:panelGroup id="pointsTable">
-                                <h:dataTable class="iksweb" value="#{entryBean.dataList}" var="entry"
-                                             >
+                                <h:dataTable class="iksweb" value="#{entryBean.dataList}" var="entry">
                                     <h:column>
                                         <f:facet name="header">X</f:facet>
                                         <h:outputText type="number" value="#{entry.x}"/>

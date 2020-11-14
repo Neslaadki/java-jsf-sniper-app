@@ -51,17 +51,9 @@ function setValue(name_variable, value_variable) {
 }
 
 function validator() {
-    // if (!x_is_selected) message += "Не выбрано значение X \n";
-    // if (!r_is_selected) message += "Не выбрано значение R";
-    // if (message.length !== 0) alert(message);
-    // message = "";
-    if(x_is_selected && r_is_selected){
-        PF('myButton').enable();
-        return true;
-    }else {
-        return false;
-    }
+    if (!x_is_selected) message += "Не выбрано значение X \n";
+    if (!r_is_selected) message += "Не выбрано значение R";
+    if (message.length !== 0) alert(message);
+    message = "";
 
 }
-
-validator();
