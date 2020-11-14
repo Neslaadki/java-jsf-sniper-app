@@ -49,12 +49,9 @@
                             <text x="157" y="275" class="axis-text" id="radius-text-bottom">-R</text>
 
                             <!-- draw figures - -->
-                            <polygon points="90,150 150,30 150,150" fill="#00f" stroke="#003"
-                                     fill-opacity="0.5"></polygon>
-                            <rect height="120" width="60" x="150" y="150" fill-opacity="0.5" fill="#a0f"
-                                  stroke="#003"></rect>
-                            <path stroke="#003" d="M 270,150 L 150,150 L 150,90 A 60,60 0 0 1 210,150"
-                                  fill-opacity="0.5"></path>
+                            <polygon points="210,150 150,270 150,150" fill="#00f" stroke="#003" fill-opacity="0.5"></polygon>
+                            <rect height="120" width="120" x="30" y="150" fill-opacity="0.5" fill="#a0f" stroke="#003"></rect>
+                            <path stroke="#003" d="M 150 150 L 150 30 A 120 120 0 0 0 30 150" fill-opacity="0.5"></path>
 
                         </svg>
                     </div>
@@ -82,8 +79,8 @@
 
                             <!--Y Coordinate-->
                             <div class="item_y">
-                                <label> Координата Y -
-                                    <h:inputText name="Y" value="#{pointBean.y}"/>
+                                <label> Координата Y (от -3 до 5) -
+                                    <h:inputText name="Y" placeholder="от -3 до 5" value="#{pointBean.y}"/>
                                 </label>
                             </div>
 
@@ -99,14 +96,12 @@
                                     <br/>
                                 </label>
                             </div>
-
                             <!--Buttons-->
                             <div>
-                                <h:commandButton value="Создать точку" action="#{pointBean.addToDB}">
+                                <p:commandButton value="Создать точку" id="disabled" disabled="true" action="#{pointBean.addToDB}" style="width: 140px; height: 20px;font-size:80%;" >
                                     <f:ajax execute="_form" render="pointsTable"/>
-                                </h:commandButton>
+                                </p:commandButton>
                             </div>
-
                         </h:form>
                     </div>
                     <div>
