@@ -99,7 +99,7 @@
                             </div>
                             <!--Buttons-->
                             <div>
-                                <p:commandButton value="Создать точку" id="disabled" disabled="false" action="#{pointBean.addToDB}" style="width: 140px; height: 20px;font-size:80%;" >
+                                <p:commandButton value="Создать точку" disabled="false" action="#{pointBean.addToDB}" style="width: 140px; height: 20px;font-size:10px;color:black;background-image:none;background-color: black; border: white solid 1px" >
                                     <f:ajax execute="_form" render="pointsTable"/>
                                 </p:commandButton>
                             </div>
@@ -138,9 +138,9 @@
                             </h:panelGroup>
                         </div>
                         <h:form>
-                            <h:commandButton id="clean_button" value="Очистить таблицу" action="#{entryBean.cleanList}">
-                                <f:ajax render="pointsTable"/>
-                            </h:commandButton>
+                            <p:commandButton id="clean_button" value="Очистить таблицу" action="#{entryBean.cleanList}" style="width:140px; height: 20px;font-size:10px;color:black;background-image:none;background-color: black" >
+                            <f:ajax render="pointsTable"/>
+                            </p:commandButton>
                         </h:form>
                     </div>
                 </div>
