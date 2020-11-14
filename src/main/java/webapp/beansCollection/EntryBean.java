@@ -1,4 +1,4 @@
-package webapp.BeansCollection;
+package webapp.beansCollection;
 
 
 

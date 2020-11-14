@@ -1,6 +1,6 @@
 package webapp.db;
 
-import webapp.BeansCollection.PointBean;
+import webapp.beansCollection.PointBean;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;

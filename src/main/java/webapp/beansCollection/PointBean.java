@@ -1,10 +1,11 @@
-package webapp.BeansCollection;
+package webapp.beansCollection;
 
 import webapp.db.EJB_Connector;
 
 import javax.ejb.EJB;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 import java.io.Serializable;
@@ -13,7 +14,8 @@ import java.util.*;
 
 
 @ManagedBean(name = "pointBean")
-@SessionScoped
+//@SessionScoped
+@RequestScoped
 public class PointBean implements Serializable {
 
     private double x;
