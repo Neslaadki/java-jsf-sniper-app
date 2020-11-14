@@ -1,3 +1,6 @@
+let radiusValue;
+
+
 function setValue(name_variable, value_variable) {
     if (name_variable === 'x') {
         document.getElementById('_form:x_value').setAttribute('value', value_variable);
@@ -14,6 +17,7 @@ function setValue(name_variable, value_variable) {
     if (name_variable === 'r') {
         document.getElementById('_form:r_value').setAttribute('value', value_variable)
         //ну тут я считаю пздц какой-то
+        radiusValue = value_variable;
         var number;
         if(value_variable===1){
             number=26;

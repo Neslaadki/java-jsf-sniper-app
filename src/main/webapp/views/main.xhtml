@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../css/form_style.css"/>
     <link rel="stylesheet" href="../css/buttons_style.css"/>
     <script type="application/javascript" src="../js/response.js"></script>
+    <script type="application/javascript" src="../js/coordinateDebilder.js"></script>
 </h:head>
 <h:body>
     <div class="header">
@@ -98,7 +99,7 @@
                             </div>
                             <!--Buttons-->
                             <div>
-                                <p:commandButton value="Создать точку" id="disabled" disabled="true" action="#{pointBean.addToDB}" style="width: 140px; height: 20px;font-size:80%;" >
+                                <p:commandButton value="Создать точку" id="disabled" disabled="false" action="#{pointBean.addToDB}" style="width: 140px; height: 20px;font-size:80%;" >
                                     <f:ajax execute="_form" render="pointsTable"/>
                                 </p:commandButton>
                             </div>
