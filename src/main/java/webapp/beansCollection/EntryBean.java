@@ -6,6 +6,7 @@ import webapp.db.EJB_Connector;
 import webapp.db.IdGenerator;
 
 import javax.ejb.EJB;
+import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.inject.Inject;
@@ -14,8 +15,9 @@ import java.util.List;
 
 
 
-@SessionScoped
+
 @ManagedBean(name = "entryBean")
+@ApplicationScoped
 public class EntryBean {
     private List<PointBean> dataList = new ArrayList<>();
 
