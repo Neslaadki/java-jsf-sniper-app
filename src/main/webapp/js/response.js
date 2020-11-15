@@ -1,6 +1,4 @@
 let radiusValue;
-let y_value = document.getElementById('y_value');
-let message = "";
 let x_value = false;
 let r_value = false;
 
@@ -48,15 +46,4 @@ function setValue(name_variable, value_variable) {
             }
         }
     }
-}
-
-function validator() {
-    message = "";
-    if (x_value === false) {
-        message += "некорректно ведено значение x<br>";
-    }
-    if (r_value === false) {
-        message += "некорректно ведено значение r <br>";
-    }
-    document.getElementById('error_message').innerHTML = message;
 }

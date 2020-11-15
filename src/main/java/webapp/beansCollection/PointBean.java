@@ -3,11 +3,13 @@ package webapp.beansCollection;
 import webapp.db.EJB_Connector;
 
 import javax.ejb.EJB;
+import javax.enterprise.context.ApplicationScoped;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
+import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.lang.reflect.Array;
 import java.util.*;
@@ -18,42 +20,49 @@ import java.util.*;
 @RequestScoped
 public class PointBean implements Serializable {
 
-    private Double x;
-    private Double y;
-    private Double r;
+    private double x = 999;
+    private double y = 0;
+    private double r = 999;
     private boolean hit = false;
     private Date dateCreation;
 
     // поле времени выполнения
     private boolean add_isSuccess;
 
-
+    public void addMessage() {
+        if(x==999.0) {
+            FacesContext.getCurrentInstance().addMessage("_form:msg", new FacesMessage("Выберите координату X\n"));
+        }
+        if(r==999.0) {
+            FacesContext.getCurrentInstance().addMessage("_form:msg", new FacesMessage("Выберите радиус R\n"));
+        }
+    }
 
     @EJB
     private EJB_Connector connector;
 
-    public Double getX() {
+    public double getX() {
         return x;
     }
 
-    public void setX(Double x) {
+    public void setX(double x) {
 
         this.x = x;
     }
 
-    public Double getY() {
+    public double getY() {
         return y;
     }
 
-    public void setY(Double y) {
+    public void setY(double y) {
         this.y = y;
     }
 
-    public Double getR() {
+    public double getR() {
         return r;
     }
 
-    public void setR(Double r) {
+    public void setR(double r) {
         this.r = r;
     }
 
@@ -82,10 +91,5 @@ public class PointBean implements Serializable {
     public void addToDB() {
         add_isSuccess = connector.addEntity(x, y, r, getHit());
     }
-
-
-
-
-
 
 }

@@ -61,8 +61,8 @@
             <div class="block__column">
                 <div class="block__item">
                     <div class='style_block'>
-                        <h:form class="form" id="_form" onsubmit="return validator()">
-<!--                            onsubmit="return validation()-->
+                        <h:form class="form" id="_form">
+                            <p:growl id="msg" widgetVar="msg" />
                             <!--X Coordinate-->
                             <div class="item_x" id="checkbox_x">
                                 <label> Координата X -
@@ -81,8 +81,8 @@
                             <!--Y Coordinate-->
                             <div class="item_y">
                                 <label> Координата Y (от -3 до 5) -
-                                    <h:inputText id="y_value" name="Y" placeholder="от -3 до 5" valueChangeListener="#{pointBean.y}" value="#{pointBean.y}">
-                                        <p:ajax event="blur" immediate="true" />
+                                    <h:inputText id="y_value" name="Y" placeholder="от -3 до 5" value="#{pointBean.y}">
+                                        <f:validateLength minimum="1" maximum="5"/>
                                     </h:inputText>
                                 </label>
                             </div>
@@ -101,10 +101,8 @@
                             </div>
                             <!--Buttons-->
                             <div>
-                                <span id="error_message" style="font-size: 20px"></span>
-                            </div>
-                            <div>
-                                <p:commandButton id="com_button" onclick="validator()" value="Создать точку"  widgetVar="myButton" action="#{pointBean.addToDB}" style="width: 140px; height: 20px;font-size:10px;color:black;background-image:none;background-color: black; border: white solid 1px" >
+                                <p:commandButton id="updater" action="#{pointBean.addMessage}" update="msg"  style="display:none; visibility: hidden"/>
+                                <p:commandButton id="com_button" onclick="$('button[id*=updater]').trigger('click');" ajax="true" value="Создать точку"  widgetVar="myButton" action="#{pointBean.addToDB}" style="width: 140px; height: 20px;font-size:10px;color:black;background-image:none;background-color: black; border: white solid 1px" >
                                     <f:ajax execute="_form" render="pointsTable"/>
                                 </p:commandButton>
                             </div>

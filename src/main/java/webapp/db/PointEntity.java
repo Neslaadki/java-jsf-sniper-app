@@ -1,6 +1,7 @@
 package webapp.db;
 
 
+import org.hibernate.validator.constraints.Range;
 import webapp.db.Interfaces.InterfacePointEntity;
 
 import javax.persistence.Entity;
@@ -12,8 +13,11 @@ public class PointEntity implements InterfacePointEntity {
 
     @Id
     private String id;
+    @Range(min = -3, max = 3, message = "значение x некорректно")
     private double x;
+    @Range(min = -3, max = 5, message = "значение y некорректно")
     private double y;
+    @Range(min = 1, max = 3, message = "значение r некорректно")
     private double r;
     private boolean hit;
     private Date dateCreation;
@@ -26,7 +30,7 @@ public class PointEntity implements InterfacePointEntity {
 
     @Override
     public void setId() {
-        this.id = ((Integer)IdGenerator.generate()).toString();
+        this.id = ((Integer) IdGenerator.generate()).toString();
     }
 
     @Override
