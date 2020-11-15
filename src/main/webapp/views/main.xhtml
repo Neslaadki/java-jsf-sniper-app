@@ -24,7 +24,7 @@
         <div class="block">
             <div class="block__column">
                 <div class="block__item" id="itemBlockWithSVG">
-                    <div class="block__svg" id="svg_wrapper">
+                    <div class="block__svg" id="svg_wrapper" onclick="$('button[id*=updater]').trigger('click');">
                         <svg class='svg_axis' xmlns="http://www.w3.org/2000/svg" width="300" height="300">
 
                             <!-- draw axis - -->
@@ -66,7 +66,9 @@
                             <!--X Coordinate-->
                             <div class="item_x" id="checkbox_x">
                                 <label> Координата X -
-                                    <h:inputText id="x_value" name="X" value="${pointBean.x}" validatorMessage="Выберите радиус X" style="display: none; visibility: hidden">
+                                    <h:inputText id="x_value" name="X" value="${pointBean.x}"
+                                                 validatorMessage="Выберите радиус X"
+                                                 style="display: none; visibility: hidden">
                                         <f:validateDoubleRange maximum="3" minimum="-3"/>
                                     </h:inputText>
                                     <p:selectBooleanCheckbox class="x_value" itemLabel="-3" value="-3" onchange="setValue('x',-3)"/>
@@ -83,7 +85,9 @@
                             <!--Y Coordinate-->
                             <div class="item_y">
                                 <label> Координата Y (от -3 до 5) -
-                                    <h:inputText id="y_value" name="Y" value="#{pointBean.y}" validatorMessage="Значение координаты Y должно принадлежать диапазону [-3;5]" converterMessage="Некорректное значение Y!">
+                                    <h:inputText id="y_value" name="Y" value="#{pointBean.y}"
+                                                 validatorMessage="Значение координаты Y должно принадлежать диапазону [-3;5]"
+                                                 converterMessage="Некорректное значение координаты Y!">
                                         <f:validateDoubleRange maximum="5" minimum="-3"/>
                                     </h:inputText>
                                 </label>
@@ -92,7 +96,10 @@
                             <!--R Radius-->
                             <div class="item_r" id="checkbox_r">
                                 <label> Значение R -
-                                    <h:inputText id="r_value" name="R" value="#{pointBean.r}" validatorMessage="Выберите радиус R" style="display: none; visibility: hidden">
+                                    <h:inputText id="r_value" name="R" value="#{pointBean.r}"
+                                                 validatorMessage="Выберите радиус R"
+                                                 style="display: none;
+                                                 visibility: hidden">
                                         <f:validateDoubleRange maximum="3" minimum="1"/>
                                     </h:inputText>
                                     <p:selectBooleanCheckbox class="r_value" itemLabel="1" value="1" onchange="setValue('r',1)"/>
@@ -150,7 +157,7 @@
                         </div>
                         <h:form>
                             <p:commandButton id="clean_button" value="Очистить таблицу" action="#{entryBean.cleanList}" style="width:140px; height: 20px;font-size:10px;color:black;background-image:none;background-color: black" >
-                            <f:ajax render="pointsTable"/>
+                                <f:ajax render="pointsTable"/>
                             </p:commandButton>
                         </h:form>
                     </div>
