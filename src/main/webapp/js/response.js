@@ -49,36 +49,6 @@ function setValue(name_variable, value_variable) {
         }
     }
 }
-$("#svg_wrapper").click(function(e) {
-    let offset = $(this).offset();
-    let relativeX = (e.pageX - offset.left);
-    let relativeY = (e.pageY - offset.top);
-    alert("X: " + relativeX + "  Y: " + relativeY);
-});
 
-
-
-// document.querySelector('#svg_wrapper').onclick = function (event){
-//
-//         let clickX = Number(event.offsetX) - 150;
-//         let clickY = Number(event.offsetY) - 150;
-//         svg_Xvalue = ((radiusValue * clickX)/120).toFixed(3);
-//         svg_Yvalue = ((-1) * (radiusValue * clickY)/120).toFixed(3);
-//         document.getElementById('_form:x_value').setAttribute('value', svg_Xvalue);
-//         document.getElementById('_form:y_value').setAttribute('value', svg_Yvalue);
-// }
-
-// $(function(){
-//     $("#checkbox_r").on("click", function(event){
-//         let clickX = Number(event.offsetX) - 150;
-//         let clickY = Number(event.offsetY) - 150;
-//         svg_Xvalue = ((radiusValue * clickX)/120).toFixed(3);
-//         svg_Yvalue = ((-1) * (radiusValue * clickY)/120).toFixed(3);
-//         document.getElementById('_form:x_value').setAttribute('value', svg_Xvalue);
-//         document.getElementById('_form:y_value').setAttribute('value', svg_Yvalue);
-//         return 0;
-//     });
-//     return 0;
-// });
 
 
