@@ -102,8 +102,13 @@
                             <!--Buttons-->
                             <div>
                                 <p:commandButton id="updater" action="#{pointBean.addMessage}" update="msg"  style="display:none; visibility: hidden"/>
-                                <p:commandButton id="com_button" onclick="$('button[id*=updater]').trigger('click');" ajax="true" value="Создать точку"  widgetVar="myButton" action="#{pointBean.addToDB}" style="width: 140px; height: 20px;font-size:10px;color:black;background-image:none;background-color: black; border: white solid 1px" >
-                                    <f:ajax execute="_form" render="pointsTable"/>
+                                <p:commandButton id="com_button"
+                                                 onclick="$('button[id*=updater]').trigger('click');"
+                                                 value="Создать точку"
+                                                 widgetVar="myButton"
+                                                 update="table__"
+                                                 action="#{pointBean.addToDB}"
+                                                 style="width: 140px; height: 20px;font-size:10px;color:black;background-image:none;background-color: black; border: white solid 1px" >
                                 </p:commandButton>
                             </div>
                         </h:form>
@@ -111,7 +116,7 @@
                     <div>
                         <div class="mobile-table">
                             <h:panelGroup id="pointsTable">
-                                <h:dataTable class="iksweb" value="#{entryBean.dataList}" var="entry">
+                                <h:dataTable class="iksweb" value="#{entryBean.dataList}" var="entry" id="table__">
                                     <h:column>
                                         <f:facet name="header">X</f:facet>
                                         <h:outputText type="number" value="#{entry.x}"/>
