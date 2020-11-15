@@ -66,7 +66,9 @@
                             <!--X Coordinate-->
                             <div class="item_x" id="checkbox_x">
                                 <label> Координата X -
-                                    <h:inputText id="x_value" name="X" value="${pointBean.x}" style="display: none; visibility: hidden"/>
+                                    <h:inputText id="x_value" name="X" value="${pointBean.x}" validatorMessage="Выберите радиус X" style="display: none; visibility: hidden">
+                                        <f:validateDoubleRange maximum="3" minimum="-3"/>
+                                    </h:inputText>
                                     <p:selectBooleanCheckbox class="x_value" itemLabel="-3" value="-3" onchange="setValue('x',-3)"/>
                                     <p:selectBooleanCheckbox class="x_value" itemLabel="-2" value="-2" onchange="setValue('x',-2)"/>
                                     <p:selectBooleanCheckbox class="x_value" itemLabel="-1" value="-1" onchange="setValue('x',-1)"/>
@@ -81,8 +83,8 @@
                             <!--Y Coordinate-->
                             <div class="item_y">
                                 <label> Координата Y (от -3 до 5) -
-                                    <h:inputText id="y_value" name="Y" placeholder="от -3 до 5" value="#{pointBean.y}">
-                                        <f:validateLength minimum="1" maximum="5"/>
+                                    <h:inputText id="y_value" name="Y" value="#{pointBean.y}" validatorMessage="Значение координаты Y должно принадлежать диапазону [-3;5]" converterMessage="Некорректное значение Y!">
+                                        <f:validateDoubleRange maximum="5" minimum="-3"/>
                                     </h:inputText>
                                 </label>
                             </div>
@@ -90,7 +92,9 @@
                             <!--R Radius-->
                             <div class="item_r" id="checkbox_r">
                                 <label> Значение R -
-                                    <h:inputText id="r_value" name="R" value="#{pointBean.r}" style="display: none; visibility: hidden"/>
+                                    <h:inputText id="r_value" name="R" value="#{pointBean.r}" validatorMessage="Выберите радиус R" style="display: none; visibility: hidden">
+                                        <f:validateDoubleRange maximum="3" minimum="1"/>
+                                    </h:inputText>
                                     <p:selectBooleanCheckbox class="r_value" itemLabel="1" value="1" onchange="setValue('r',1)"/>
                                     <p:selectBooleanCheckbox class="r_value" itemLabel="1.5" value="1.5" onchange="setValue('r',1.5)"/>
                                     <p:selectBooleanCheckbox class="r_value" itemLabel="2" value="2" onchange="setValue('r',2)"/>
@@ -101,7 +105,7 @@
                             </div>
                             <!--Buttons-->
                             <div>
-                                <p:commandButton id="updater" action="#{pointBean.addMessage}" update="msg"  style="display:none; visibility: hidden"/>
+                                <p:commandButton id="updater" update="msg" style="display:none; visibility: hidden"/>
                                 <p:commandButton id="com_button"
                                                  onclick="$('button[id*=updater]').trigger('click');"
                                                  value="Создать точку"

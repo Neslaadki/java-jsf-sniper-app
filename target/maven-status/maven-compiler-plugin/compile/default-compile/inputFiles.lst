@@ -1,6 +1,8 @@
-/Users/antondzubak/Desktop/javaEE_dev/sources/web_3/src/main/java/webapp/db/Interfaces/InterfacePointEntity.java
-/Users/antondzubak/Desktop/javaEE_dev/sources/web_3/src/main/java/webapp/beansCollection/EntryBean.java
-/Users/antondzubak/Desktop/javaEE_dev/sources/web_3/src/main/java/webapp/db/EJB_Connector.java
-/Users/antondzubak/Desktop/javaEE_dev/sources/web_3/src/main/java/webapp/beansCollection/PointBean.java
-/Users/antondzubak/Desktop/javaEE_dev/sources/web_3/src/main/java/webapp/db/IdGenerator.java
-/Users/antondzubak/Desktop/javaEE_dev/sources/web_3/src/main/java/webapp/db/PointEntity.java
+C:\Users\79312\Desktop\GitHub\web_3\src\main\java\webapp\beansCollection\PointBean.java
+C:\Users\79312\Desktop\GitHub\web_3\src\main\java\webapp\beansCollection\EntryBean.java
+C:\Users\79312\Desktop\GitHub\web_3\src\main\java\webapp\db\IdGenerator.java
+C:\Users\79312\Desktop\GitHub\web_3\src\main\java\webapp\db\Interfaces\InterfacePointEntity.java
+C:\Users\79312\Desktop\GitHub\web_3\src\main\java\webapp\db\PointEntity.java
+C:\Users\79312\Desktop\GitHub\web_3\src\main\java\webapp\beansCollection\ValueValidator.java
+C:\Users\79312\Desktop\GitHub\web_3\src\main\java\webapp\beansCollection\CheckBoxValidator.java
+C:\Users\79312\Desktop\GitHub\web_3\src\main\java\webapp\db\EJB_Connector.java

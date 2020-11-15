@@ -22,21 +22,12 @@ public class PointBean implements Serializable {
 
     private double x = 999;
     private double y = 0;
-    private double r = 999;
+    private double r = 998;
     private boolean hit = false;
     private Date dateCreation;
 
     // поле времени выполнения
     private boolean add_isSuccess;
-
-    public void addMessage() {
-        if(x==999.0) {
-            FacesContext.getCurrentInstance().addMessage("_form:msg", new FacesMessage("Выберите координату X\n"));
-        }
-        if(r==999.0) {
-            FacesContext.getCurrentInstance().addMessage("_form:msg", new FacesMessage("Выберите радиус R\n"));
-        }
-    }
 
     @EJB
     private EJB_Connector connector;
