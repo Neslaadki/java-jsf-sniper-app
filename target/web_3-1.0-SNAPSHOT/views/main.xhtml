@@ -72,9 +72,6 @@
                                                  style="display: none; visibility: hidden">
                                         <f:validateDoubleRange minimum="-3" maximum="5"/>
                                     </h:inputText>
-                                    <h:inputText id="x_value_hid" name="X" value="${pointBean.x}"
-                                                 style="display: none; visibility: hidden">
-                                    </h:inputText>
                                     <p:selectBooleanCheckbox class="x_value" itemLabel="-3" value="-3" onchange="setValue('x',-3)"/>
                                     <p:selectBooleanCheckbox class="x_value" itemLabel="-2" value="-2" onchange="setValue('x',-2)"/>
                                     <p:selectBooleanCheckbox class="x_value" itemLabel="-1" value="-1" onchange="setValue('x',-1)"/>
@@ -89,11 +86,11 @@
                             <!--Y Coordinate-->
                             <div class="item_y">
                                 <label> Координата Y (от -3 до 5) -
-                                    <h:inputText id="y_value" name="Y" value="#{pointBean.y}"
+                                    <p:inputText autocomplete="off" id="y_value"  name="Y" value="#{pointBean.y}"
                                                  validatorMessage="Значение координаты Y должно принадлежать диапазону [-3;5]"
                                                  converterMessage="Некорректное значение координаты Y!">
                                         <f:validateDoubleRange maximum="5" minimum="-3"/>
-                                    </h:inputText>
+                                    </p:inputText>
                                 </label>
                             </div>
 
@@ -118,6 +115,7 @@
                             <div>
                                 <p:commandButton id="updater" update="table__" style="display:none; visibility: hidden"/>
                                 <p:commandButton id="updater_r" update="pointsTable" style="display:none; visibility: hidden"/>
+                                <p:commandButton id="updater_form" update="pointsTable" style="display:none; visibility: hidden"/>
                                 <p:commandButton id="com_button"
                                                  onclick="$('button[id*=updater]').trigger('click');"
                                                  value="Создать точку"
@@ -168,11 +166,8 @@
                                 </p:repeat>
                             </h:panelGroup>
                         </div>
-                        <h:outputScript>
-                            defaultValueX();
-                        </h:outputScript>
                         <h:form>
-                            <p:commandButton update="pointsTable" id="clean_button" value="Очистить таблицу" action="#{entryBean.cleanList}" style="width:140px; height: 20px;font-size:10px;color:black;background-image:none;background-color: black"/>
+                            <p:commandButton update="pointsTable" onclick="cleanerPoints()" id="clean_button" value="Очистить таблицу" action="#{entryBean.cleanList}" style="width:140px; height: 20px;font-size:10px;color:black;background-image:none;background-color: black"/>
                         </h:form>
                     </div>
                 </div>

@@ -1,10 +1,12 @@
 package webapp.beansCollection;
 
+import org.primefaces.PrimeFaces;
 import webapp.db.EJB_Connector;
 
 import javax.ejb.EJB;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
+import javax.faces.context.FacesContext;
 import java.io.Serializable;
 import java.util.*;
 
@@ -75,6 +77,7 @@ public class PointBean implements Serializable {
 
     public void addToDB() {
         add_isSuccess = connector.addEntity(x, y, r, getHit());
+        PrimeFaces.current().ajax().update("_form");
     }
 
 }

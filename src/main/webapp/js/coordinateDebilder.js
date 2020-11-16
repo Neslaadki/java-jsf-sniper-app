@@ -24,9 +24,9 @@ function drawPoint(x, y, radius, hit) {
 }
 
 function cleanerPoints(){
-    let svg = document.getElementById('svg_for_point').getElementsByTagName('circle');
-    for (let i = 0; i < svg.length; i++) {
-        svg[i].remove();
+    let vars = document.querySelector('#svg_for_point').getElementsByTagName('circle');
+    if(vars.length !== 0){
+        vars.remove();
     }
 }
 
@@ -38,10 +38,9 @@ $(function () {
         if (radiusValue != null) {
             let x_val = ((radiusValue * relativeX) / 120).toFixed(3);
             let y_val = ((-1) * (radiusValue * relativeY) / 120).toFixed(3);
-            document.getElementById("_form:x_value_hid").setAttribute('value', x_val);
+            document.getElementById("_form:x_value").setAttribute('value', x_val);
             document.getElementById("_form:y_value").setAttribute('value', y_val);
         }
-
     });
     return 0;
 });
