@@ -2,6 +2,11 @@ let radiusValue;
 let x_value = false;
 let r_value = false;
 
+function defaultValueX(){
+    document.getElementById('_form:j_idt' + 19).getElementsByClassName("ui-chkbox-box ui-widget ui-corner-all ui-state-default")[0].children[0].setAttribute('class', '.ui-chkbox-icon ui-icon ui-c ui-icon-check');
+    document.getElementById('_form:j_idt' + 19).getElementsByClassName("ui-chkbox-box ui-widget ui-corner-all ui-state-default")[0].setAttribute('class', 'ui-chkbox-box ui-widget ui-corner-all ui-state-default ui-state-active');
+}
+
 function setValue(name_variable, value_variable) {
     if (name_variable === 'x') {
         document.getElementById('_form:x_value').setAttribute('value', value_variable);
@@ -17,7 +22,7 @@ function setValue(name_variable, value_variable) {
         }
     }
     if (name_variable === 'r') {
-        document.getElementById('_form:r_value').setAttribute('value', value_variable)
+        document.getElementById('_form:r_value').setAttribute('value', value_variable);
         radiusValue = value_variable;
         r_value=true;
         var number;
@@ -48,5 +53,5 @@ function setValue(name_variable, value_variable) {
     }
 }
 
-
+function removeCircles(){}
 
