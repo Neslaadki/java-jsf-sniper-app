@@ -24,7 +24,7 @@
         <div class="block">
             <div class="block__column">
                 <div class="block__item" id="itemBlockWithSVG">
-                    <div class="block__svg" id="svg_wrapper" onclick="$('button[id*=updater]').trigger('click');">
+                    <div class="block__svg" id="svg_wrapper" onclick="$('button[id*=com_button]').trigger('click');">
                         <svg class='svg_axis' xmlns="http://www.w3.org/2000/svg" width="300" height="300">
 
                             <!-- draw axis - -->
@@ -67,9 +67,9 @@
                             <div class="item_x" id="checkbox_x">
                                 <label> Координата X -
                                     <h:inputText id="x_value" name="X" value="${pointBean.x}"
-                                                 validatorMessage="Выберите радиус X"
+                                                 validatorMessage="Значение координаты X должно принадлежать диапазону [-3;3]"
                                                  style="display: none; visibility: hidden">
-                                        <f:validateDoubleRange maximum="3" minimum="-3"/>
+                                        <f:validateDoubleRange minimum="-3" maximum="3"/>
                                     </h:inputText>
                                     <p:selectBooleanCheckbox class="x_value" itemLabel="-3" value="-3" onchange="setValue('x',-3)"/>
                                     <p:selectBooleanCheckbox class="x_value" itemLabel="-2" value="-2" onchange="setValue('x',-2)"/>
@@ -97,7 +97,7 @@
                             <div class="item_r" id="checkbox_r">
                                 <label> Значение R -
                                     <h:inputText id="r_value" name="R" value="#{pointBean.r}"
-                                                 validatorMessage="Выберите радиус R"
+                                                 validatorMessage="Значение координаты Y должно принадлежать диапазону [1;3]"
                                                  style="display: none;
                                                  visibility: hidden">
                                         <f:validateDoubleRange maximum="3" minimum="1"/>

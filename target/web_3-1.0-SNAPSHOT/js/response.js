@@ -1,8 +1,6 @@
 let radiusValue;
 let x_value = false;
 let r_value = false;
-let svg_Xvalue;
-let svg_Yvalue;
 
 function setValue(name_variable, value_variable) {
     if (name_variable === 'x') {
