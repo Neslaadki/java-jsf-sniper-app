@@ -20,6 +20,7 @@
 <h:body>
     <div class="header">
         <m:include src="../views/headersNames.xhtml"/>
+        <p:linkButton value="Посмотреть время" outcome="clock.xhtml"/>
     </div>
     <div class="content">
         <div class="block">
@@ -167,10 +168,7 @@
                         </div>
                         <h:form>
                             <p:commandButton update="pointsTable" onclick="cleanerPoints()" id="clean_button" value="Очистить таблицу" action="#{entryBean.cleanList}" style="width:140px; height: 20px;font-size:10px;color:black;background-image:none;background-color: black"/>
-                            <label class="linkOnMainPage">
-                                <h:link value = "Посмотреть время! " outcome = "clock.xhtml"/>
-                            </label>
-                        </h:form>
+                         </h:form>
                     </div>
                 </div>
             </div>
