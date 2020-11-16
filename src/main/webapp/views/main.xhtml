@@ -167,6 +167,9 @@
                         </div>
                         <h:form>
                             <p:commandButton update="pointsTable" onclick="cleanerPoints()" id="clean_button" value="Очистить таблицу" action="#{entryBean.cleanList}" style="width:140px; height: 20px;font-size:10px;color:black;background-image:none;background-color: black"/>
+                            <label class="linkOnMainPage">
+                                <h:link value = "Посмотреть время! " outcome = "clock.xhtml"/>
+                            </label>
                         </h:form>
                     </div>
                 </div>
