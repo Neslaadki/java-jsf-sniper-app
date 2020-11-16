@@ -14,6 +14,7 @@ function drawPoint(x, y, radius, hit) {
         circle.setAttribute('cy', String(y_value_point));
         circle.setAttribute('r', '5');
         circle.setAttribute('stroke', 'black');
+        circle.setAttribute('class','point');
         if (hit) {
             circle.setAttribute('fill', 'green');
         } else {
@@ -24,10 +25,7 @@ function drawPoint(x, y, radius, hit) {
 }
 
 function cleanerPoints(){
-    let vars = document.querySelector('#svg_for_point').getElementsByTagName('circle');
-    if(vars.length !== 0){
-        vars.remove();
-    }
+    $("circle.point").remove();
 }
 
 $(function () {
