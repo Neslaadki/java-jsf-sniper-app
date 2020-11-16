@@ -16,7 +16,7 @@ import java.util.*;
 @RequestScoped
 public class PointBean implements Serializable {
 
-    private double x = 0;
+    private double x = 999;
     private double y = 0;
     private double r = 998;
     private boolean hit = false;
@@ -77,7 +77,8 @@ public class PointBean implements Serializable {
 
     public void addToDB() {
         add_isSuccess = connector.addEntity(x, y, r, getHit());
-        PrimeFaces.current().ajax().update("_form");
+        PrimeFaces.current().ajax().update("_form:x_value");
+        PrimeFaces.current().ajax().update("_form:y_value");
     }
 
 }
