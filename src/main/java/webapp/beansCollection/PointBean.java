@@ -77,8 +77,8 @@ public class PointBean implements Serializable {
 
     public void addToDB() {
         add_isSuccess = connector.addEntity(x, y, r, getHit());
-        PrimeFaces.current().ajax().update("_form:x_value");
         PrimeFaces.current().ajax().update("_form:y_value");
+        PrimeFaces.current().ajax().update("_form:x_value");
     }
 
 }

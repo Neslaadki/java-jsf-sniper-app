@@ -41,6 +41,7 @@ $(function () {
             document.getElementById("_form:x_value").setAttribute('value', x_val);
             document.getElementById("_form:y_value").setAttribute('value', y_val);
         }
+
     });
     return 0;
 });

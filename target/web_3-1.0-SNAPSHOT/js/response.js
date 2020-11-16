@@ -48,4 +48,3 @@ function setValue(name_variable, value_variable) {
         }
     }
 }
-
